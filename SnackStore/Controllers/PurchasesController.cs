@@ -95,15 +95,15 @@ namespace SnackStore.Controllers
         }
 
         /// <summary>
-        /// Purchases a product. 
-        /// Reduce stock from product
+        /// Purchases an available product. 
+        /// Reduce stock from product.
         /// </summary>
         /// <param name="pruchaseproducdto">Specified Product Id and Quantity</param>
         /// <returns>Get purchase history</returns>
         [HttpPost]
         public async Task<ActionResult> PurchaseProduct([FromBody] PurchaseProductDTO pruchaseproducdto)
         {
-            var product = await context.Products.FirstOrDefaultAsync(x => x.Id == pruchaseproducdto.ProductId);
+            var product = await context.Products.FirstOrDefaultAsync(x => x.Id == pruchaseproducdto.ProductId && x.Availability == true);
 
             if (product == null)
             {

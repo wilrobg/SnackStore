@@ -70,9 +70,9 @@ namespace SnackStore.Controllers
         /// <returns></returns>
         [HttpPost("AddAdminUser")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
-        public async Task<ActionResult> AddAdminUser(string user)
+        public async Task<ActionResult> AddAdminUser(UserInfoDTO user)
         {
-            var userap = await _userManager.FindByEmailAsync(user);
+            var userap = await _userManager.FindByEmailAsync(user.Email);
 
             if (userap == null)
             {

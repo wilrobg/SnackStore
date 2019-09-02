@@ -36,7 +36,7 @@ namespace SnackStore.Controllers
         }
 
         /// <summary>
-        /// Get a list of products Avialable(when Avialavility true) or Unavialable(when Avialavility false) 
+        /// Get a list of products Avialable(when Avialable true) or Unavialable(when Avialavility false) 
         /// </summary>
         /// <param name="search">search by name</param>
         /// <param name="sort_by">Order by likes or name</param>
@@ -219,18 +219,17 @@ namespace SnackStore.Controllers
             {
                 product.Likes++;
 
-                var isValid = TryValidateModel(LikesTrack);
-
-                if (!isValid)
-                {
-                    return BadRequest(ModelState);
-                }
-
                 var addlike = new LikesTrack { 
                     ProductId = id,
                     UserId = userid,
                     Product = product
                 };
+                var isValid = TryValidateModel(addlike);
+
+                if (!isValid)
+                {
+                    return BadRequest(ModelState);
+                }
                 context.Add(addlike);
                 await context.SaveChangesAsync();
             }

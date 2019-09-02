@@ -23,7 +23,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"Email\" : \"costumer@gmail.com\",\n    \"Password\" : \"Wxvzcawil.1234\"\n}"
+							"raw": "{\n\t\"Email\" : \"nelson@gmail.com\",\n    \"Password\" : \"Wxvzcawil.1234\"\n}"
 						},
 						"url": {
 							"raw": "https://localhost:44368/api/account/CreateUser",
@@ -56,7 +56,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"Email\" : \"admin@gmail.com\",\n    \"Password\" : \"Wxvzcawil.1234\"\n}"
+							"raw": "{\n\t\"Email\" : \"nelson@gmail.com\",\n    \"Password\" : \"Wxvzcawil.1234\"\n}"
 						},
 						"url": {
 							"raw": "https://localhost:44368/api/account/Login",
@@ -77,10 +77,21 @@
 				{
 					"name": "Add admin role to user",
 					"request": {
-						"method": "GET",
-						"header": [],
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Email\" : \"nelson@gmail.com\"\n}"
+						},
 						"url": {
-							"raw": "https://localhost:44368/api/account/costumer@gmail.com",
+							"raw": "https://localhost:44368/api/account/AddAdminUser",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -89,7 +100,7 @@
 							"path": [
 								"api",
 								"account",
-								"costumer@gmail.com"
+								"AddAdminUser"
 							]
 						}
 					},
@@ -184,12 +195,58 @@
 					"response": []
 				},
 				{
+					"name": "Get Unavailable Products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44368/api/products/Unavialable",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44368",
+							"path": [
+								"api",
+								"products",
+								"Unavialable"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get Product By Name",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:44368/api/products?search=232",
+							"raw": "https://localhost:44368/api/products?search=soda",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -202,7 +259,7 @@
 							"query": [
 								{
 									"key": "search",
-									"value": "232"
+									"value": "soda"
 								}
 							]
 						}
@@ -321,7 +378,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://localhost:44368/api/products/1",
+							"raw": "https://localhost:44368/api/products/9",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -330,7 +387,7 @@
 							"path": [
 								"api",
 								"products",
-								"1"
+								"9"
 							]
 						}
 					},
@@ -350,7 +407,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"Name\": \"Churrito Bocadeli\",\r\n  \"Price\": \"-0.15\",\r\n  \"Stock\": \"10\"\r\n}"
+							"raw": "{\r\n  \"Name\": \"Chips\",\r\n  \"Price\": \"0.25\",\r\n  \"Stock\": \"10\",\r\n  \"Availability\": \"true\"\r\n}"
 						},
 						"url": {
 							"raw": "https://localhost:44368/api/products",
@@ -381,10 +438,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[{\n\t\"op\" : \"replace\",\n\t\"path\" : \"/Pricee\",\n\t\"value\": \"11\"\n}]"
+							"raw": "[{\n\t\"op\" : \"replace\",\n\t\"path\" : \"/Price\",\n\t\"value\": \"11\"\n}]"
 						},
 						"url": {
-							"raw": "https://localhost:44368/api/products/5",
+							"raw": "https://localhost:44368/api/products/4",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -393,7 +450,7 @@
 							"path": [
 								"api",
 								"products",
-								"5"
+								"4"
 							]
 						}
 					},
@@ -405,7 +462,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:44368/api/products/50/like",
+							"raw": "https://localhost:44368/api/products/8/like",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -414,7 +471,7 @@
 							"path": [
 								"api",
 								"products",
-								"50",
+								"8",
 								"like"
 							]
 						}
@@ -506,7 +563,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:44368/api/Purchases/1",
+							"raw": "https://localhost:44368/api/Purchases/7",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -515,7 +572,7 @@
 							"path": [
 								"api",
 								"Purchases",
-								"1"
+								"7"
 							]
 						}
 					},
@@ -529,7 +586,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluQGdtYWlsLmNvbSIsImp0aSI6IjI4ODc4YTcyLWE3YmMtNDQyNi04MzNiLTIyMGQ1NDNjNmYzNSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiN2JhNjY3NjgtOGZiNC00Yjk4LWIzOTYtYjVhZmFmMjc1MjgwIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE1Njc0NTg2NTl9.6xJeco0N2EAjTqtpiKLL38pXuT5mO7AMjbjUH37rAR0",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Im5lbHNvbkBnbWFpbC5jb20iLCJqdGkiOiI0MmY0ODgyMy0wMmY0LTRkZTEtYWVmYS0xMTQ5NDc2OTJmZmYiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjUwZmY3ZjdmLWEyYmEtNGMyYS04NjhmLTIzZjM0Mzc5YzAyOCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6WyJBZG1pbiIsIkNvc3R1bWVyIl0sImV4cCI6MTU2NzQ2ODk4Nn0.u-mi5lrWOzh4bo8jap9iBnnCDvqXK1e7c0jU19r97-Q",
 				"type": "string"
 			}
 		]
