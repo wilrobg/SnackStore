@@ -1,0 +1,14 @@
+C:\Users\wguardado\source\repos\SnackStore\SnackStore\obj\Debug\netcoreapp2.2\SnackStore.csproj.CoreCompileInputs.cache
+C:\Users\wguardado\source\repos\SnackStore\SnackStore\obj\Debug\netcoreapp2.2\SnackStore.RazorAssemblyInfo.cache
+C:\Users\wguardado\source\repos\SnackStore\SnackStore\obj\Debug\netcoreapp2.2\SnackStore.RazorAssemblyInfo.cs
+C:\Users\wguardado\source\repos\SnackStore\SnackStore\obj\Debug\netcoreapp2.2\SnackStore.AssemblyInfoInputs.cache
+C:\Users\wguardado\source\repos\SnackStore\SnackStore\obj\Debug\netcoreapp2.2\SnackStore.AssemblyInfo.cs
+C:\Users\wguardado\source\repos\SnackStore\SnackStore\bin\Debug\netcoreapp2.2\SnackStore.deps.json
+C:\Users\wguardado\source\repos\SnackStore\SnackStore\bin\Debug\netcoreapp2.2\SnackStore.runtimeconfig.json
+C:\Users\wguardado\source\repos\SnackStore\SnackStore\bin\Debug\netcoreapp2.2\SnackStore.runtimeconfig.dev.json
+C:\Users\wguardado\source\repos\SnackStore\SnackStore\bin\Debug\netcoreapp2.2\SnackStore.dll
+C:\Users\wguardado\source\repos\SnackStore\SnackStore\bin\Debug\netcoreapp2.2\SnackStore.pdb
+C:\Users\wguardado\source\repos\SnackStore\SnackStore\obj\Debug\netcoreapp2.2\SnackStore.RazorTargetAssemblyInfo.cache
+C:\Users\wguardado\source\repos\SnackStore\SnackStore\obj\Debug\netcoreapp2.2\SnackStore.dll
+C:\Users\wguardado\source\repos\SnackStore\SnackStore\obj\Debug\netcoreapp2.2\SnackStore.pdb
+C:\Users\wguardado\source\repos\SnackStore\SnackStore\obj\Debug\netcoreapp2.2\SnackStore.csprojAssemblyReference.cache
